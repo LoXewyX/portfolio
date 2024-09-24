@@ -40,11 +40,7 @@ function Home() {
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8">
             LUIS RUIZ CARACUEL
           </h2>
-          <p className="text-lg md:text-xl mb-4">
-            Fullstack and Software programmer
-          </p>
 
-          <p className="text-xl md:text-2xl mb-8">Network and servers</p>
           <div className="flex justify-center space-x-4">
             {buttonContent.map(({ Icon, label, url }) => (
               <a
@@ -62,30 +58,13 @@ function Home() {
         </div>
 
         <div className="atom">
-          <div
-            className="molecule"
-            style={{ '--initial-rotate': `${Math.random() * 360}deg` }}
-          ></div>
-          <div
-            className="molecule"
-            style={{ '--initial-rotate': `${Math.random() * 360}deg` }}
-          ></div>
-          <div
-            className="molecule"
-            style={{ '--initial-rotate': `${Math.random() * 360}deg` }}
-          ></div>
-          <div
-            className="molecule"
-            style={{ '--initial-rotate': `${Math.random() * 360}deg` }}
-          ></div>
-          <div
-            className="molecule"
-            style={{ '--initial-rotate': `${Math.random() * 360}deg` }}
-          ></div>
-          <div
-            className="molecule"
-            style={{ '--initial-rotate': `${Math.random() * 360}deg` }}
-          ></div>
+          {[...Array(6)].map((_, index) => (
+            <div
+              key={index}
+              className="molecule"
+              style={{ '--initial-rotate': `${Math.random() * 360}deg` }}
+            ></div>
+          ))}
         </div>
       </section>
 
@@ -97,7 +76,7 @@ function Home() {
           <h2 className="text-3xl font-bold my-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
             My Skills
           </h2>
-          <h3 className="text-2xl mb-4">Languages</h3>
+          <h3 className="text-2xl mb-4 mt-8">Languages</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {languages.map((skill, i) => (
               <a
@@ -108,7 +87,7 @@ function Home() {
                 <img
                   src={skill.src}
                   alt={skill.name}
-                  className="h-16 mb-2"
+                  className="h-16 mb-2 drop-shadow"
                   loading="lazy"
                 />
                 <span className="text-sm">{skill.name}</span>
@@ -116,7 +95,7 @@ function Home() {
             ))}
           </div>
 
-          <h3 className="text-2xl mb-4">Frameworks</h3>
+          <h3 className="text-2xl mb-4 mt-8">Frameworks</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {frameworks.map((skill, i) => (
               <a
@@ -127,7 +106,7 @@ function Home() {
                 <img
                   src={skill.src}
                   alt={skill.name}
-                  className="h-16 mb-2"
+                  className="h-16 mb-2 drop-shadow"
                   loading="lazy"
                 />
                 <span className="text-sm">{skill.name}</span>
@@ -135,7 +114,7 @@ function Home() {
             ))}
           </div>
 
-          <h3 className="text-2xl mb-4">Databases</h3>
+          <h3 className="text-2xl mb-4 mt-8">Databases</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {databases.map((skill, i) => (
               <a
@@ -146,7 +125,7 @@ function Home() {
                 <img
                   src={skill.src}
                   alt={skill.name}
-                  className="h-16 mb-2"
+                  className="h-16 mb-2 drop-shadow"
                   loading="lazy"
                 />
                 <span className="text-sm">{skill.name}</span>
@@ -154,7 +133,7 @@ function Home() {
             ))}
           </div>
 
-          <h3 className="text-2xl mb-4">Styling</h3>
+          <h3 className="text-2xl mb-4 mt-8">Styling</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {styling.map((skill, i) => (
               <a
@@ -165,7 +144,7 @@ function Home() {
                 <img
                   src={skill.src}
                   alt={skill.name}
-                  className="h-16 mb-2"
+                  className="h-16 mb-2 drop-shadow"
                   loading="lazy"
                 />
                 <span className="text-sm">{skill.name}</span>
