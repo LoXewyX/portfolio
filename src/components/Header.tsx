@@ -76,6 +76,19 @@ function Header() {
               {item}
             </a>
           ))}
+          {amount.value === achievements.value.length ? (
+            <a
+              href="https://www.youtube.com/watch?v=NNQdizB4kL8"
+              className="text-purple-400 transition-colors text-"
+              style={{
+                animation: 'hueRotate 5s infinite linear',
+              }}
+            >
+              ???
+            </a>
+          ) : (
+            <></>
+          )}
         </div>
       </nav>
 
