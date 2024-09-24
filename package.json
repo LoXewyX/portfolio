@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && bunx --bun vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@preact/signals": "^1.3.0",
+    "disable-devtool": "^0.3.7",
+    "howler": "^2.2.4",
+    "preact": "^10.24.0",
+    "preact-iso": "^2.6.3",
+    "react-feather": "^2.0.10",
+    "sass": "^1.79.3"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.9.1",
+    "@types/bun": "latest",
+    "@types/howler": "^2.2.12",
+    "@types/web": "^0.0.165",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "serve": "^14.2.3",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.7"
+  },
+  "module": "index.ts"
+}

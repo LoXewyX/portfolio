@@ -1,0 +1,123 @@
+h2 {
+  font-family: 'ZeroCool';
+}
+
+.atom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+}
+
+.atom > .molecule {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+.atom > .molecule::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #28f;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 5px #2288ff33, 0 0 0 10px #2288ff22, 0 0 20px #28f,
+    0 0 50px #28f;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(var(--initial-rotate));
+  }
+  to {
+    transform: rotate(calc(var(--initial-rotate) + 360deg));
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(var(--initial-rotate));
+  }
+  to {
+    transform: rotate(calc(var(--initial-rotate) - 360deg));
+  }
+}
+
+.atom > .molecule:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  animation: spin 8s linear infinite;
+}
+
+.atom > .molecule:nth-child(1)::before {
+  background-color: #28f;
+  box-shadow: 0 0 0 5px #2288ff33, 0 0 0 10px #2288ff22, 0 0 20px #28f,
+    0 0 50px #28f;
+}
+
+.atom > .molecule:nth-child(2) {
+  width: 400px;
+  height: 400px;
+  animation: spin-reverse 12s linear infinite;
+}
+
+.atom > .molecule:nth-child(2)::before {
+  background-color: #82f;
+  box-shadow: 0 0 0 5px #8822ff33, 0 0 0 10px #8822ff22, 0 0 20px #82f,
+    0 0 50px #82f;
+}
+
+.atom > .molecule:nth-child(3) {
+  width: 600px;
+  height: 600px;
+  animation: spin 16s linear infinite;
+}
+
+.atom > .molecule:nth-child(3)::before {
+  background-color: #abf;
+  box-shadow: 0 0 0 5px #aabbff33, 0 0 0 10px #aabbff22, 0 0 20px #abf,
+    0 0 50px #abf;
+}
+
+.atom > .molecule:nth-child(4) {
+  width: 800px;
+  height: 800px;
+  animation: spin-reverse 20s linear infinite;
+}
+
+.atom > .molecule:nth-child(4)::before {
+  background-color: #ff8;
+  box-shadow: 0 0 0 5px #ffdd8833, 0 0 0 10px #ffdd8822, 0 0 20px #ff8,
+    0 0 50px #ff8;
+}
+
+.atom > .molecule:nth-child(5) {
+  width: 1000px;
+  height: 1000px;
+  animation: spin 24s linear infinite;
+}
+
+.atom > .molecule:nth-child(5)::before {
+  background-color: #f88;
+  box-shadow: 0 0 0 5px #ff228833, 0 0 0 10px #ff228822, 0 0 20px #f88,
+    0 0 50px #f88;
+}
+
+.atom > .molecule:nth-child(6) {
+  width: 1200px;
+  height: 1200px;
+  animation: spin-reverse 28s linear infinite;
+}
+
+.atom > .molecule:nth-child(6)::before {
+  background-color: #8ff;
+  box-shadow: 0 0 0 5px #88ffff33, 0 0 0 10px #88ffff22, 0 0 20px #8ff,
+    0 0 50px #8ff;
+}
