@@ -24,6 +24,14 @@ function Home() {
 
   useSignalEffect(() => {
     document.title = 'LoXewyX - Portfolio';
+
+    const switcher = document.querySelector('.switcher') as HTMLAnchorElement;
+    const screen = document.querySelector('.screen') as HTMLElement;
+
+    switcher.addEventListener('click', (e: MouseEvent) => {
+        e.preventDefault();
+        screen.classList.toggle('glitch');
+    });
   });
 
   return (
@@ -37,7 +45,7 @@ function Home() {
           <div className="w-full h-full bg-gradient-to-b from-purple-900 via-blue-900 to-black opacity-50"></div>
         </div>
         <div className="relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 glitch">
             LUIS RUIZ CARACUEL
           </h2>
 
