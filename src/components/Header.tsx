@@ -45,7 +45,7 @@ function Header() {
               {item}
             </a>
           ))}
-          {amount.value !== achievements.value.length ? (
+          {amount.value === achievements.value.length ? (
             <a
               href="https://www.youtube.com/watch?v=NNQdizB4kL8"
               className="text-purple-400 transition-colors text-"
