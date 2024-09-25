@@ -1,4 +1,7 @@
 @font-face {
   font-family: 'ZeroCool';
-  src: url('/fonts/ZeroCool.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/ZeroCool.woff2') format('woff2');
+  font-display: swap;
 }

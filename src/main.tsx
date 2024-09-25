@@ -4,6 +4,6 @@ import DisableDevtool from 'disable-devtool';
 import { App } from './app.tsx';
 import './index.scss';
 
-DisableDevtool();
+if (process.env.NODE_ENV !== 'development') DisableDevtool();
 
 render(<App />, document.getElementById('app')!);

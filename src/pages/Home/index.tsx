@@ -37,7 +37,7 @@ function Home() {
           <div className="w-full h-full bg-gradient-to-b from-purple-900 via-blue-900 to-black opacity-50"></div>
         </div>
         <div className="relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 glitch">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 zerocool">
             LUIS RUIZ CARACUEL
           </h2>
 
@@ -48,7 +48,7 @@ function Home() {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 py-2 rounded-full flex items-center justify-center space-x-2 transition-all duration-300"
+                className="bg-purple-700 bg-opacity-20 hover:bg-opacity-40 text-white px-4 py-2 rounded-full flex items-center justify-center space-x-2 transition-all duration-300"
               >
                 <Icon />
                 <span className="hidden sm:inline">{label}</span>
@@ -82,10 +82,12 @@ function Home() {
               <a
                 key={i}
                 href={skill.url}
+                rel="noopener noreferrer"
                 className="bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center"
               >
                 <img
                   src={skill.src}
+                  alt={skill.name}
                   width={64}
                   height={64}
                   className="h-16 mb-2 drop-shadow"
@@ -102,10 +104,12 @@ function Home() {
               <a
                 key={i}
                 href={skill.url}
+                rel="noopener noreferrer"
                 className="bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center"
               >
                 <img
                   src={skill.src}
+                  alt={skill.name}
                   width={64}
                   height={64}
                   className="h-16 mb-2 drop-shadow"
@@ -122,10 +126,12 @@ function Home() {
               <a
                 key={i}
                 href={skill.url}
+                rel="noopener noreferrer"
                 className="bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center"
               >
                 <img
                   src={skill.src}
+                  alt={skill.name}
                   width={64}
                   height={64}
                   className="h-16 mb-2 drop-shadow"
@@ -142,10 +148,12 @@ function Home() {
               <a
                 key={i}
                 href={skill.url}
+                rel="noopener noreferrer"
                 className="bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center"
               >
                 <img
                   src={skill.src}
+                  alt={skill.name}
                   width={64}
                   height={64}
                   className="h-16 mb-2 drop-shadow"
@@ -176,7 +184,7 @@ function Home() {
                 onClick={() => (activeFilter.value = category)}
                 className={`mt-2 px-4 py-2 rounded-full transition-all duration-300 ${
                   activeFilter.value === category
-                    ? 'bg-purple-600 text-white'
+                    ? 'bg-purple-700 text-white'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
               >
@@ -189,6 +197,7 @@ function Home() {
               <a
                 key={i}
                 href={project.url}
+                rel="noopener noreferrer"
                 className={`${project.color} p-6 rounded shadow`}
               >
                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
