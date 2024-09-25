@@ -43,7 +43,7 @@ const buttonContent = [
 
 const languages = [
   { name: 'Rust', src: imgRust, url: 'https://www.rust-lang.org/' },
-  { name: 'Go', src: imgGo, url: 'https://go.dev/' },
+  { name: 'Golang', src: imgGo, url: 'https://go.dev/' },
   {
     name: 'Java',
     src: imgJava,
@@ -52,7 +52,7 @@ const languages = [
   { name: 'C# (DotNET)', src: imgDotnet, url: 'https://dotnet.microsoft.com/' },
   { name: 'Python 3', src: imgPython, url: 'https://www.python.org/' },
   {
-    name: 'Javascript (NodeJS)',
+    name: 'Javascript',
     src: imgJavascript,
     url: 'https://nodejs.org/',
   },
@@ -88,12 +88,12 @@ const databases = [
 
 const styling = [
   {
-    name: 'Bootstrap 5 CSS',
+    name: 'Bootstrap',
     src: imgBootstrap,
     url: 'https://getbootstrap.com/docs/5.0/getting-started/introduction/',
   },
   {
-    name: 'Tailwind CSS',
+    name: 'Tailwind',
     src: imgTailwindcss,
     url: 'https://tailwindcss.com/',
   },

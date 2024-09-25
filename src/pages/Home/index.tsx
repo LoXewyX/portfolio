@@ -24,14 +24,6 @@ function Home() {
 
   useSignalEffect(() => {
     document.title = 'LoXewyX - Portfolio';
-
-    const switcher = document.querySelector('.switcher') as HTMLAnchorElement;
-    const screen = document.querySelector('.screen') as HTMLElement;
-
-    switcher.addEventListener('click', (e: MouseEvent) => {
-        e.preventDefault();
-        screen.classList.toggle('glitch');
-    });
   });
 
   return (
@@ -94,7 +86,8 @@ function Home() {
               >
                 <img
                   src={skill.src}
-                  alt={skill.name}
+                  width={64}
+                  height={64}
                   className="h-16 mb-2 drop-shadow"
                   loading="lazy"
                 />
@@ -113,7 +106,8 @@ function Home() {
               >
                 <img
                   src={skill.src}
-                  alt={skill.name}
+                  width={64}
+                  height={64}
                   className="h-16 mb-2 drop-shadow"
                   loading="lazy"
                 />
@@ -132,7 +126,8 @@ function Home() {
               >
                 <img
                   src={skill.src}
-                  alt={skill.name}
+                  width={64}
+                  height={64}
                   className="h-16 mb-2 drop-shadow"
                   loading="lazy"
                 />
@@ -151,7 +146,8 @@ function Home() {
               >
                 <img
                   src={skill.src}
-                  alt={skill.name}
+                  width={64}
+                  height={64}
                   className="h-16 mb-2 drop-shadow"
                   loading="lazy"
                 />

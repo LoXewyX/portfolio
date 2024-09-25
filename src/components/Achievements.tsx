@@ -75,7 +75,7 @@ const Achievements = () => {
             }}
           >
             <div className="ani_icon">
-              <img src={ach.icon} alt={ach.name} loading="lazy" />
+              <img src={ach.icon} alt={ach.name} width={80} height={80} />
             </div>
             <span className="text-md">
               <b>Achievement Unlocked!</b>
