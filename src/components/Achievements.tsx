@@ -4,7 +4,7 @@ import {
   queuedAchievements,
   unlockAchievement,
 } from '../signals/Achievements';
-import './Achievements.scss';
+import '../scss/Achievements.scss';
 
 // Signals
 const konamiInput = signal<string[]>([]);

@@ -1,0 +1,47 @@
+.ach-area {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  overflow-y: hidden;
+  z-index: 9999;
+}
+
+.ani_div {
+  width: 320px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: 10s ease-out slideInFromBottom;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #30302e, #1a1a17);
+  opacity: 0;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  5% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.ani_icon {
+  width: 80px;
+  height: 80px;
+  margin-right: 16px;
+  line-height: 64px;
+}
+
+.fading {
+  opacity: 0;
+}

@@ -11,7 +11,7 @@ import {
   projects,
   certifications,
 } from './data';
-import './index.scss';
+import '../../scss/Orbit.scss';
 
 const activeFilter = signal('All');
 

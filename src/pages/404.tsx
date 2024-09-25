@@ -1,3 +1,5 @@
+import '../scss/Orbit.scss';
+
 function NotFound() {
   return (
     <div className="bg-black text-white">

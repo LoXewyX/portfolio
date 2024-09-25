@@ -7,6 +7,7 @@ import {
   unlockAchievement,
   amount,
 } from '../signals/Achievements';
+import '../scss/';
 
 const openMenu = signal(false);
 
@@ -91,20 +92,6 @@ function Header() {
           )}
         </div>
       </nav>
-
-      {/* Add inline keyframe definition for hue rotation */}
-      <style>
-        {`
-          @keyframes hueRotate {
-            from {
-              filter: hue-rotate(0deg);
-            }
-            to {
-              filter: hue-rotate(360deg);
-            }
-          }
-        `}
-      </style>
     </header>
   );
 }
