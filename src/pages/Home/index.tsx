@@ -13,7 +13,7 @@ import {
 } from './data';
 import '../../scss/Orbit.scss';
 
-const activeFilter = signal('All');
+const activeFilter = signal<string>('All');
 
 function Home() {
   const filteredProjects = useComputed(() =>
