@@ -7,7 +7,7 @@ import {
   unlockAchievement,
   amount,
 } from '../signals/Achievements';
-import '../scss/';
+import '../scss/Header.scss';
 
 const openMenu = signal(false);
 
