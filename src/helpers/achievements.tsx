@@ -40,7 +40,7 @@ const achievements = signal<IAchievement[]>([
     unlocked: false,
   },
   {
-    name: 'Boomer Gamer',
+    name: isMobile ? 'This achievement is available for PC' : 'Boomer Gamer',
     hint: 'A very secret key pattern that videogames had',
     icon: imgAch3,
     unlocked: false,

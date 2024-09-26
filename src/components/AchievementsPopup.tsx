@@ -47,13 +47,16 @@ function AchievementsPopup() {
 
   useSignalEffect(() => {
     unlockAchievement(EAchievement.SO_IT_BEGINS);
-    if (isMobile) unlockAchievement(EAchievement.INTERLOPER);
-    
-    window.addEventListener('keydown', handleKeydown);
+    if (isMobile) {
+      unlockAchievement(EAchievement.INTERLOPER);
+      unlockAchievement(EAchievement.KONAMI_CODE);
+    }
+
+    if (isMobile) window.addEventListener('keydown', handleKeydown);
     window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('keydown', handleKeydown);
+      if (isMobile) window.removeEventListener('keydown', handleKeydown);
       window.removeEventListener('resize', handleResize);
     };
   });
