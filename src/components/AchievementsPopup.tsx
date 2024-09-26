@@ -3,8 +3,9 @@ import {
   EAchievement,
   queuedAchievements,
   unlockAchievement,
-} from '../signals/Achievements';
+} from '../helpers/achievements';
 import '../scss/Achievements.scss';
+import { isMobile } from 'react-device-detect';
 
 interface AchievementItemProps {
   achievement: { name: string; icon: string };
@@ -46,6 +47,8 @@ function AchievementsPopup() {
 
   useSignalEffect(() => {
     unlockAchievement(EAchievement.SO_IT_BEGINS);
+    if (isMobile) unlockAchievement(EAchievement.INTERLOPER);
+    
     window.addEventListener('keydown', handleKeydown);
     window.addEventListener('resize', handleResize);
 
@@ -65,7 +68,7 @@ function AchievementsPopup() {
 }
 
 function AchievementItem({ achievement }: AchievementItemProps) {
-  const isVisible = signal(true);
+  const isVisible = signal<boolean>(true);
 
   useSignalEffect(() => {
     const timer = setTimeout(() => (isVisible.value = false), 5000);

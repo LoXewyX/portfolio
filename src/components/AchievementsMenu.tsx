@@ -1,6 +1,6 @@
 import { signal, useSignalEffect } from '@preact/signals';
-import { achievements } from '../signals/Achievements';
-import { openAchsMenu } from '../signals/AchievementsMenu';
+import { achievements } from '../helpers/achievements';
+import { openAchsMenu } from '../helpers/achievementsMenu';
 
 const menuHotkey = signal<{ shift: boolean; tab: boolean }>({
   shift: false,

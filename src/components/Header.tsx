@@ -5,8 +5,8 @@ import {
   achievements,
   unlockAchievement,
   amount,
-} from '../signals/Achievements';
-import { openAchsMenu } from '../signals/AchievementsMenu';
+} from '../helpers/achievements';
+import { openAchsMenu } from '../helpers/achievementsMenu';
 import '../scss/Header.scss';
 
 const openMenu = signal<boolean>(false);

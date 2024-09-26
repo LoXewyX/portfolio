@@ -1,5 +1,5 @@
 import { signal, useComputed, useSignalEffect } from '@preact/signals';
-
+import { isMobile } from 'react-device-detect';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AchievementsPopup from '../../components/AchievementsPopup';
@@ -32,7 +32,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <AchievementsMenu />
-      <Cursor />
+      {isMobile ? <></> : <Cursor />}
       <Header />
       <section
         id="home"

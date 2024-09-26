@@ -1,4 +1,4 @@
-import { amount, achievements } from '../signals/Achievements';
+import { amount, achievements } from '../helpers/achievements';
 
 function Footer() {
   return (
