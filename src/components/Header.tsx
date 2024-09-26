@@ -6,15 +6,15 @@ import {
   unlockAchievement,
   amount,
 } from '../signals/Achievements';
+import { openAchsMenu } from '../signals/AchievementsMenu';
 import '../scss/Header.scss';
 
 const openMenu = signal<boolean>(false);
 
 function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg bg-white bg-opacity-5 backdrop-blur-md px-2 shadow-xl">
+    <header className="fixed top-0 left-0 right-0 z-10 bg bg-white bg-opacity-5 backdrop-blur-md px-2 shadow-xl">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Left side: Logo */}
         <div
           id="nickname"
           className="flex cursor-pointer"
@@ -102,7 +102,7 @@ function Header() {
 
         {/* Mobile full-screen menu with transition */}
         <div
-          className={`fixed inset-0 z-50 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-8 text-white text-2xl h-screen transition-all duration-300 ease-in-out transform ${
+          className={`fixed inset-0 z-20 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-8 text-white text-2xl h-screen transition-all duration-300 ease-in-out transform ${
             openMenu.value ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
           onClick={() => (openMenu.value = !openMenu.value)}
@@ -116,6 +116,12 @@ function Header() {
               {item}
             </a>
           ))}
+          <div
+            className="hover:text-purple-400 transition-colors"
+            onClick={() => (openAchsMenu.value = !openAchsMenu.value)}
+          >
+            Achievements
+          </div>
           {amount.value === achievements.value.length ? (
             <a
               href="https://www.youtube.com/watch?v=NNQdizB4kL8"

@@ -2,6 +2,9 @@ import { signal, useComputed, useSignalEffect } from '@preact/signals';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import AchievementsPopup from '../../components/AchievementsPopup';
+import AchievementsMenu from '../../components/AchievementsMenu';
+import Cursor from '../../components/Cursor';
 import {
   buttonContent,
   languages,
@@ -28,6 +31,8 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
+      <AchievementsMenu />
+      <Cursor />
       <Header />
       <section
         id="home"
@@ -228,6 +233,7 @@ function Home() {
       </section>
 
       <Footer />
+      <AchievementsPopup />
     </div>
   );
 }

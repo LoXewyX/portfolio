@@ -5,12 +5,18 @@ $primary-color-4: #ff8;
 $primary-color-5: #f88;
 $primary-color-6: #8ff;
 
-$shadow-1: 0 0 0 5px #2288ff33, 0 0 0 10px #2288ff22, 0 0 20px $primary-color-1, 0 0 50px $primary-color-1;
-$shadow-2: 0 0 0 5px #8822ff33, 0 0 0 10px #8822ff22, 0 0 20px $primary-color-2, 0 0 50px $primary-color-2;
-$shadow-3: 0 0 0 5px #aabbff33, 0 0 0 10px #aabbff22, 0 0 20px $primary-color-3, 0 0 50px $primary-color-3;
-$shadow-4: 0 0 0 5px #ffdd8833, 0 0 0 10px #ffdd8822, 0 0 20px $primary-color-4, 0 0 50px $primary-color-4;
-$shadow-5: 0 0 0 5px #ff228833, 0 0 0 10px #ff228822, 0 0 20px $primary-color-5, 0 0 50px $primary-color-5;
-$shadow-6: 0 0 0 5px #88ffff33, 0 0 0 10px #88ffff22, 0 0 20px $primary-color-6, 0 0 50px $primary-color-6;
+$shadow-1: 0 0 0 5px #2288ff33, 0 0 0 10px #2288ff22, 0 0 20px $primary-color-1,
+  0 0 50px $primary-color-1;
+$shadow-2: 0 0 0 5px #8822ff33, 0 0 0 10px #8822ff22, 0 0 20px $primary-color-2,
+  0 0 50px $primary-color-2;
+$shadow-3: 0 0 0 5px #aabbff33, 0 0 0 10px #aabbff22, 0 0 20px $primary-color-3,
+  0 0 50px $primary-color-3;
+$shadow-4: 0 0 0 5px #ffdd8833, 0 0 0 10px #ffdd8822, 0 0 20px $primary-color-4,
+  0 0 50px $primary-color-4;
+$shadow-5: 0 0 0 5px #ff228833, 0 0 0 10px #ff228822, 0 0 20px $primary-color-5,
+  0 0 50px $primary-color-5;
+$shadow-6: 0 0 0 5px #88ffff33, 0 0 0 10px #88ffff22, 0 0 20px $primary-color-6,
+  0 0 50px $primary-color-6;
 
 $sizes: (
   1: 200px,
@@ -64,17 +70,15 @@ $shadows: (
       transform: translate(-50%, -50%);
     }
 
-    // Loop through 1 to 6 for the molecules
     @for $i from 1 through 6 {
       &:nth-child(#{$i}) {
         width: map-get($sizes, $i);
         height: map-get($sizes, $i);
-        
-        // Check if the index is odd or even to determine spin direction
+
         @if ($i % 2 == 0) {
-          animation: spin #{8 + 4 * ($i - 1)}s linear infinite; // Even: spin forward
+          animation: spin #{8 + 4 * ($i - 1)}s linear infinite;
         } @else {
-          animation: spin-reverse #{8 + 4 * ($i - 1)}s linear infinite; // Odd: spin backward
+          animation: spin-reverse #{8 + 4 * ($i - 1)}s linear infinite;
         }
 
         &::before {

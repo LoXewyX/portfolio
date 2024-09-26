@@ -1,13 +1,12 @@
 import { signal } from '@preact/signals';
 import { Howl } from 'howler';
 import JSConfetti from 'js-confetti';
-
-import Ach1 from '/img/ach1.webp';
-import Ach2 from '/img/ach2.webp';
-import Ach3 from '/img/ach3.webp';
-import Ach4 from '/img/ach4.webp';
-import Ach5 from '/img/ach5.webp';
-import Ach6 from '/img/ach6.webp';
+import imgAch1 from '/img/ach1.webp';
+import imgAch2 from '/img/ach2.webp';
+import imgAch3 from '/img/ach3.webp';
+import imgAch4 from '/img/ach4.webp';
+import imgAch5 from '/img/ach5.webp';
+import imgAch6 from '/img/ach6.webp';
 
 interface IAchievement {
   name: string;
@@ -29,32 +28,37 @@ const achievements = signal<IAchievement[]>([
   {
     name: 'The Quest Begins',
     hint: 'Click on screen to start',
-    icon: Ach1,
+    icon: imgAch1,
     unlocked: false,
   },
-  { name: 'Interloper!', hint: 'Open devtools', icon: Ach2, unlocked: false },
+  {
+    name: 'Interloper!',
+    hint: 'Open devtools',
+    icon: imgAch2,
+    unlocked: false,
+  },
   {
     name: 'Boomer Gamer',
     hint: 'A very secret key pattern that videogames had',
-    icon: Ach3,
+    icon: imgAch3,
     unlocked: false,
   },
   {
     name: "I can't breathe",
     hint: 'Choke this page',
-    icon: Ach4,
+    icon: imgAch4,
     unlocked: false,
   },
   {
     name: "That's me!",
     hint: 'Click on my brand',
-    icon: Ach5,
+    icon: imgAch5,
     unlocked: false,
   },
   {
     name: 'You completed 5 achievements!',
     hint: 'Unlock 5 achievements',
-    icon: Ach6,
+    icon: imgAch6,
     unlocked: false,
   },
 ]);
@@ -87,11 +91,11 @@ const unlockAchievement = (index: number) => {
       queuedAchievements.value = queuedAchievements.value.filter(
         (ach) => ach !== achievement
       );
-    }, 10000);
+    }, 5000);
 
-    // Unlock additional achievement if 5 achievements are unlocked
     if (amount.value >= 5) unlockAchievement(EAchievement.FIVE_ACHIEVEMENTS);
-    if (amount.value === achievements.value.length) new JSConfetti().addConfetti()
+    if (amount.value === achievements.value.length)
+      new JSConfetti().addConfetti();
   });
 };
 

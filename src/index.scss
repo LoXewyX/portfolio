@@ -13,11 +13,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-body {
-  cursor: url('/img/cur_normal.webp'), auto;
-}
-
-a, .cursor-pointer {
-  cursor: url('/img/cur_pointer.webp'), pointer;
-}

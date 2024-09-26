@@ -1,5 +1,4 @@
 import { GitHub, Linkedin, Mail } from 'react-feather';
-
 import imgRust from '/img/rust.webp';
 import imgGo from '/img/go.webp';
 import imgJava from '/img/java.webp';
