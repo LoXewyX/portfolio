@@ -12,8 +12,12 @@ import '../scss/Header.scss';
 const openMenu = signal<boolean>(false);
 
 function Header() {
+  const handleMobileMenuClick = () => {
+    openMenu.value = !openMenu.value;
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-10 bg bg-white bg-opacity-5 backdrop-blur-md px-2 shadow-xl">
+    <header className="fixed top-0 left-0 right-0 z-10 bg-white bg-opacity-5 backdrop-blur-md px-2 shadow-xl">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div
           id="nickname"
@@ -67,8 +71,8 @@ function Header() {
 
         {/* Right side: Toggle Button */}
         <div
-          className="md:hidden"
-          onClick={() => (openMenu.value = !openMenu.value)}
+          className="md:hidden cursor-pointer"
+          onClick={handleMobileMenuClick}
         >
           <Menu />
         </div>
@@ -88,24 +92,22 @@ function Header() {
             <a
               href="https://www.youtube.com/watch?v=NNQdizB4kL8"
               rel="noopener noreferrer"
-              className="text-purple-400 transition-colors text-"
+              className="text-purple-400 transition-colors"
               style={{
                 animation: 'hueRotate 5s infinite linear',
               }}
             >
               ???
             </a>
-          ) : (
-            <></>
-          )}
+          ) : null}
         </div>
 
-        {/* Mobile full-screen menu with transition */}
+        {/* Mobile full-screen menu */}
         <div
           className={`fixed inset-0 z-20 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-8 text-white text-2xl h-screen transition-all duration-300 ease-in-out transform ${
             openMenu.value ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
-          onClick={() => (openMenu.value = !openMenu.value)}
+          onClick={handleMobileMenuClick}
         >
           {['Home', 'Skills', 'Projects', 'Certifications'].map((item) => (
             <a
@@ -126,16 +128,14 @@ function Header() {
             <a
               href="https://www.youtube.com/watch?v=NNQdizB4kL8"
               rel="noopener noreferrer"
-              className="text-purple-400 transition-colors text-"
+              className="text-purple-400 transition-colors"
               style={{
                 animation: 'hueRotate 5s infinite linear',
               }}
             >
               ???
             </a>
-          ) : (
-            <></>
-          )}
+          ) : null}
         </div>
       </nav>
     </header>

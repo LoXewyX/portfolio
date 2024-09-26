@@ -41,12 +41,12 @@ function Home() {
         <div className="absolute inset-0 z-0">
           <div className="w-full h-full bg-gradient-to-b from-purple-900 via-blue-900 to-black opacity-50"></div>
         </div>
-        <div className="relative z-10 text-center">
+        <div className="relative text-center">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 zerocool">
             LUIS RUIZ CARACUEL
           </h2>
 
-          <div className="flex justify-center space-x-4">
+          <div className="flex z-10 justify-center space-x-4">
             {buttonContent.map(({ Icon, label, url }) => (
               <a
                 key={label}
