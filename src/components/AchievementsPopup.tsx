@@ -52,11 +52,11 @@ function AchievementsPopup() {
       unlockAchievement(EAchievement.KONAMI_CODE);
     }
 
-    if (isMobile) window.addEventListener('keydown', handleKeydown);
+    if (!isMobile) window.addEventListener('keydown', handleKeydown);
     window.addEventListener('resize', handleResize);
 
     return () => {
-      if (isMobile) window.removeEventListener('keydown', handleKeydown);
+      if (!isMobile) window.removeEventListener('keydown', handleKeydown);
       window.removeEventListener('resize', handleResize);
     };
   });
