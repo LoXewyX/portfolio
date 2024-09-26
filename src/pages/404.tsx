@@ -8,7 +8,7 @@ function NotFound() {
           <div className="w-full h-full bg-gradient-to-b from-purple-900 via-blue-900 to-black opacity-50"></div>
         </div>
 
-        <div className="relative z-10 text-center">
+        <div className="relative text-center" style={{ zIndex: 1 }}>
           <div className="text-6xl md:text-8xl font-bold mb-4 zerocool">
             Oops! Page Not Found
           </div>
