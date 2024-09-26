@@ -83,7 +83,7 @@ function Home() {
                 key={i}
                 href={skill.url}
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center"
+                className="bg-gray-800 hover:bg-gray-700 transition-colors p-4 rounded-lg flex flex-col items-center justify-center text-center"
               >
                 <img
                   src={skill.src}
@@ -105,7 +105,7 @@ function Home() {
                 key={i}
                 href={skill.url}
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center"
+                className="bg-gray-800 hover:bg-gray-700 transition-colors p-4 rounded-lg flex flex-col items-center justify-center text-center"
               >
                 <img
                   src={skill.src}
@@ -127,7 +127,7 @@ function Home() {
                 key={i}
                 href={skill.url}
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center"
+                className="bg-gray-800 hover:bg-gray-700 transition-colors p-4 rounded-lg flex flex-col items-center justify-center text-center"
               >
                 <img
                   src={skill.src}
@@ -149,7 +149,7 @@ function Home() {
                 key={i}
                 href={skill.url}
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-4 rounded-lg flex flex-col items-center justify-center text-center"
+                className="bg-gray-800 hover:bg-gray-700 transition-colors p-4 rounded-lg flex flex-col items-center justify-center text-center"
               >
                 <img
                   src={skill.src}

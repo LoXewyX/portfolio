@@ -43,11 +43,11 @@ function Footer() {
         <p>
           Total achievements: {amount.value}/{achievements.value.length}
           <span className="mx-2">|</span>
-          <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+          <kbd class="px-1 py-0.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
             Shift
           </kbd>{' '}
           +{' '}
-          <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+          <kbd class="px-1 py-0.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
             Tab
           </kbd>
         </p>
@@ -75,9 +75,9 @@ function Footer() {
               <div className="ani-icon mb-4">
                 <img src={ach.icon} alt={ach.name} width={80} height={80} />
               </div>
-              <span className="text-md text-center">
+              <span className="h-full text-center flex flex-col -full justify-center items-center">
                 <b>Achievement Unlocked!</b>
-                <div>{ach.name}</div>
+                <div>{ach.unlocked ? ach.name : ach.hint}</div>
               </span>
             </div>
           ))}
