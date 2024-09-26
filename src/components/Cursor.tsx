@@ -49,7 +49,7 @@ function Cursor() {
 
   return (
     <div
-      class={`cursor fixed pointer-events-none z-50 duration-100 transition rounded-full border-[2px] border-white border-solid ${
+      class={`cursor fixed pointer-events-none z-50 transition-opacity duration-200 rounded-full border-[2px] border-white border-solid ${
         isVisible.value ? 'opacity-100' : 'opacity-0'
       } ${
         isPointer.value
@@ -57,8 +57,8 @@ function Cursor() {
           : 'w-[20px] h-[20px]'
       }`}
       style={{
-        transform: `translate(${cursorPosition.value.x - 10}px, ${
-          cursorPosition.value.y - 10 - cursorPosition.value.scrollY
+        transform: `translate(${cursorPosition.value.x - (isPointer.value ? 20 : 10)}px, ${
+          cursorPosition.value.y - (isPointer.value ? 20 : 10) - cursorPosition.value.scrollY
         }px)`,
       }}
     ></div>

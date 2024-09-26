@@ -7,6 +7,7 @@ import {
   amount,
 } from '../helpers/achievements';
 import { openAchsMenu } from '../helpers/achievementsMenu';
+import { isSecretPageEnabled } from '../helpers/secret';
 import '../scss/Header.scss';
 
 const openMenu = signal<boolean>(false);
@@ -69,7 +70,7 @@ function Header() {
           </div>
         </div>
 
-        {/* Right side: Toggle Button */}
+        {/* Toggle Button */}
         <div
           className="md:hidden cursor-pointer"
           onClick={handleMobileMenuClick}
@@ -90,16 +91,18 @@ function Header() {
           ))}
           {amount.value === achievements.value.length ? (
             <a
-              href="https://www.youtube.com/watch?v=NNQdizB4kL8"
-              rel="noopener noreferrer"
+              href="/secret"
               className="text-purple-400 transition-colors"
               style={{
                 animation: 'hueRotate 5s infinite linear',
               }}
+              onClick={() => (isSecretPageEnabled.value = true)}
             >
               ???
             </a>
-          ) : null}
+          ) : (
+            <></>
+          )}
         </div>
 
         {/* Mobile full-screen menu */}
@@ -126,16 +129,18 @@ function Header() {
           </div>
           {amount.value === achievements.value.length ? (
             <a
-              href="https://www.youtube.com/watch?v=NNQdizB4kL8"
-              rel="noopener noreferrer"
+              href="/secret"
               className="text-purple-400 transition-colors"
               style={{
                 animation: 'hueRotate 5s infinite linear',
               }}
+              onClick={() => (isSecretPageEnabled.value = true)}
             >
               ???
             </a>
-          ) : null}
+          ) : (
+            <></>
+          )}
         </div>
       </nav>
     </header>
