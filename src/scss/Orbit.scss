@@ -56,7 +56,7 @@ $shadows: (
 
   > .molecule {
     position: absolute;
-    border-radius: 50%;
+    border-radius: 9999px;
     opacity: 0.25;
 
     &::before {
@@ -64,7 +64,7 @@ $shadows: (
       position: absolute;
       width: 30px;
       height: 30px;
-      border-radius: 50%;
+      border-radius: 9999px;
       top: 50%;
       left: 100%;
       transform: translate(-50%, -50%);
